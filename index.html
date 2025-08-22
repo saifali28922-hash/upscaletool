@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Image Upscaler</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>AI Image Upscaler (RealESRGAN x4, CPU / WASM)</h1>
+
+        <div style="margin: 12px 0;">
+            <input type="file" id="upload" accept="image/*" />
+        </div>
+
+        <div style="margin: 8px 0;">
+            <label>Tile size:
+                <input id="tileSize" type="number" value="128" min="64" max="512" step="64" style="width:80px">
+            </label>
+            <label style="margin-left:12px;">Overlap:
+                <input id="overlap" type="number" value="8" min="0" max="32" step="4" style="width:80px">
+            </label>
+            <button id="runBtn">Upscale</button>
+            <span id="status" style="margin-left:10px; opacity:.8;"></span>
+        </div>
+
+        <div class="images">
+            <div>
+                <h2>Original</h2>
+                <canvas id="originalCanvas"></canvas>
+            </div>
+            <div>
+                <h2>Upscaled</h2>
+                <canvas id="upscaledCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Load generic WASM build only -->
+    <script src="assets/libs/node_modules/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
