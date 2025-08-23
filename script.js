@@ -1,5 +1,5 @@
 // ====== CONFIG ======
-const MODEL_PATH = "assets/models/realesrganX4plus_v1.onnx";
+const MODEL_PATH = "./assets/models/realesrganX4plus_v1.onnx";
 const UPSCALE = 4; // RealESRGAN x4
 
 // ✅ Force CPU (WASM only, no GPU)
@@ -201,4 +201,5 @@ runBtn.addEventListener("click", async() => {
         console.error("❌ Upscaling failed:", err);
         statusEl.textContent = "Upscaling failed. See console.";
     }
+
 });
