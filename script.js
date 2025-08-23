@@ -1,5 +1,6 @@
 // ====== CONFIG ======
-const MODEL_PATH = "assets/models/realesrganX4plus_v1.onnx";
+const MODEL_PATH = "https://raw.githubusercontent.com/saifali28922-hash/upscaletool/main/assets/models/realesrganX4plus_v1.onnx
+";
 const UPSCALE = 4; // RealESRGAN x4
 
 // ✅ Force CPU (WASM only, no GPU)
@@ -203,5 +204,6 @@ runBtn.addEventListener("click", async() => {
     }
 
 });
+
 
 
